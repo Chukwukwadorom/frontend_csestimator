@@ -1,0 +1,13 @@
+body {
+  font-family: Inter, Arial, sans-serif; /* Ensures both fonts work */
+  background: #f0f2f5; /* Lighter background */
+  color: #213547; /* Dark text color for readability */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Allows stacking of elements */
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+}

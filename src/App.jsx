@@ -22,21 +22,22 @@ function App() {
     waist: "",
     wrist: "",
   });
+  const [consent, setConsent] = useState(false);
 
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Clothing Size Estimator</h1>
       
       {/* Image Upload Component */}
-      <UploadForm setMeasurements={setMeasurements} />
-      {/* <UploadForm setMeasurements={setMeasurements} realMeasurements={realMeasurements} /> */}
+      {/* <UploadForm setMeasurements={setMeasurements} /> */}
+      <UploadForm setMeasurements={setMeasurements} realMeasurements={realMeasurements} consent ={consent} />
 
       
       {/* Display Predictions if Available */}
       {measurements && <PredictedMeasurements measurements={measurements} />}
       
       {/* Real Measurements Input Form */}
-      <RealMeasurementsForm realMeasurements={realMeasurements} setRealMeasurements={setRealMeasurements} />
+      <RealMeasurementsForm realMeasurements={realMeasurements} setRealMeasurements={setRealMeasurements} consent ={consent} setConsent={setConsent}/>
     </div>
   );
 }
